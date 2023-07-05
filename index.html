@@ -1,94 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shih-Hung Chiu's Personal Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    header {
-      background-color: #35434a;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-    nav {
-      display: flex;
-      justify-content: space-around;
-      background-color: #333;
-      padding: 1rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-    }
-    nav a:hover {
-      background-color: #555;
-      border-radius: 5px;
-    }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      overflow: auto;
-      padding: 2rem;
-      background-color: white;
-      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
-    .profile-image {
-      width: 150px;
-      height: auto;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-    h1, h2 {
-      color: #333;
-      margin-bottom: 1rem;
-    }
-    p {
-      margin-bottom: 1rem;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-      margin-bottom: 1rem;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shih-Hung Chiu's Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        header h1 {
+            color: blue;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        #about, #projects {
+            display: none;
+        }
+        #about.active, #projects.active {
+            display: block;
+        }
+        .profile-image {
+            width: 250px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Shih-Hung Chiu</h1>
-    <p>PhD student at UC Berkeley</p>
-  </header>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-  </nav>
-  <section class="container" id="about">
+
+<header>
+    <h1>Shih-Hung Chiu's Personal Website</h1>
+</header>
+
+<nav>
+    <a href="#" onclick="show('about')">About</a>
+    <a href="#" onclick="show('projects')">Projects</a>
+</nav>
+
+<div id="about" class="active">
+    <h2>About Me</h2>
     <img src="https://geomechanics.berkeley.edu/wp-content/uploads/2022/11/shih-hung.jpg" alt="Shih-Hung Chiu" class="profile-image">
-    <h2>About Shih-Hung Chiu</h2>
-    <p>Shih-Hung Chiu graduated from National Taiwan University (NTU) in 2019 with a B.S. in Civil Engineering and obtained M.S. in Systems Engineering, Civil and Environmental Engineering from University of California, Berkeley in 2022. He is currently a PhD student in Civil Systems under Professor Kenichi Soga. His research projects focus on improving infrastructure resiliency by using advanced sensing technologies and computational modeling.</p>
-    <h2>Research interests:</h2>
-    <ul>
-      <li>Smart Infrastructure</li>
-      <li>Infrastructure Health Monitoring</li>
-      <li>Distributed Fiber Optic Sensing Technique</li>
-      <li>City-scale Infrastructure Resilience Modeling</li>
-    </ul>
-  </section>
-  <section class="container" id="projects">
+    <p>My name is Shih-Hung Chiu. I'm a PhD student in the Civil and Environmental Engineering Department at UC Berkeley working on smart infrastructures.</p>
+</div>
+
+<div id="projects">
     <h2>Projects</h2>
     <p>Coming soon...</p>
-  </section>
+</div>
+
+<script>
+    function show(id) {
+        document.getElementById('about').classList.remove('active');
+        document.getElementById('projects').classList.remove('active');
+        document.getElementById(id).classList.add('active');
+    }
+</script>
+
 </body>
 </html>
