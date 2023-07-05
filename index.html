@@ -1,125 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
-    <style>
-        /* Reset some default styles */
-        body, h1, h2, p {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-
-        /* Navigation styles */
-        nav {
-            background-color: #333;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-
-        nav ul li a {
-            display: inline-block;
-            padding: 10px;
-            color: white;
-            text-decoration: none;
-        }
-
-        nav ul li a:hover {
-            background-color: #555;
-        }
-
-        /* Main content styles */
-        main {
-            padding: 20px;
-        }
-
-        section {
-            margin-bottom: 20px;
-        }
-
-        h1, h2 {
-            color: #333;
-        }
-
-        h1 {
-            font-size: 24px;
-        }
-
-        h2 {
-            font-size: 18px;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        /* Footer styles */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shih-Hung Chiu's Personal Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #35434a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #333;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+    nav a:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      overflow: auto;
+      padding: 2rem;
+      background-color: white;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+    .profile-image {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    h1, h2 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <h1>About Me</h1>
-            <img src="https://geomechanics.berkeley.edu/wp-content/uploads/2022/11/shih-hung.jpg" alt="Shih-Hung Chiu">
-            <p>Shih-Hung Chiu graduated from National Taiwan University (NTU) in 2019 with a B.S. in Civil Engineering and obtained an M.S. in Systems Engineering, Civil and Environmental Engineering from the University of California, Berkeley in 2022. He is currently a PhD student in Civil Systems under Professor Kenichi Soga. His research projects focus on improving infrastructure resiliency by using advanced sensing technologies and computational modeling.</p>
-            <h2>Research interests:</h2>
-            <ul>
-                <li>Smart Infrastructure</li>
-                <li>Infrastructure Health Monitoring</li>
-                <li>Distributed Fiber Optic Sensing Technique</li>
-                <li>City-scale Infrastructure Resilience Modeling</li>
-            </ul>
-        </section>
-        <section id="projects">
-            <h1>Projects</h1>
-            <article>
-                <h2>Project 1</h2>
-                <p>This is a description of my first project.</p>
-            </article>
-            <article>
-                <h2>Project 2</h2>
-                <p>This is a description of my second project.</p>
-            </article>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2022 Shih-Hung Chiu. All rights reserved.</p>
-    </footer>
+  <header>
+    <h1>Shih-Hung Chiu</h1>
+    <p>PhD student at UC Berkeley</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+  </nav>
+  <section class="container" id="about">
+    <img src="https://geomechanics.berkeley.edu/wp-content/uploads/2022/11/shih-hung.jpg" alt="Shih-Hung Chiu" class="profile-image">
+    <h2>About Shih-Hung Chiu</h2>
+    <p>Shih-Hung Chiu graduated from National Taiwan University (NTU) in 2019 with a B.S. in Civil Engineering and obtained M.S. in Systems Engineering, Civil and Environmental Engineering from University of California, Berkeley in 2022. He is currently a PhD student in Civil Systems under Professor Kenichi Soga. His research projects focus on improving infrastructure resiliency by using advanced sensing technologies and computational modeling.</p>
+    <h2>Research interests:</h2>
+    <ul>
+      <li>Smart Infrastructure</li>
+      <li>Infrastructure Health Monitoring</li>
+      <li>Distributed Fiber Optic Sensing Technique</li>
+      <li>City-scale Infrastructure Resilience Modeling</li>
+    </ul>
+  </section>
+  <section class="container" id="projects">
+    <h2>Projects</h2>
+    <p>Coming soon...</p>
+  </section>
 </body>
 </html>
